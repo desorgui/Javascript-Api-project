@@ -67,6 +67,52 @@ a {
   color: #000;
 }
 
+.main-section {
+  padding: 2rem;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+}
+
+.display-item-block,
+.display-item-block-2 {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2.45rem;
+}
+
+.item-img-block {
+  border: 2px solid #000;
+  width: 350px;
+  height: 350px;
+  margin-bottom: 1rem;
+}
+
+.images {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.item-title-like {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0 12px;
+  margin-bottom: 1.75rem;
+}
+
+.comment-btn {
+  display: flex;
+  margin: 0 auto;
+  border-radius: 3px;
+  height: 26px;
+  padding: 5px;
+  box-shadow: 3px 3px #000;
+}
+
 .footer {
   font-family: var(--poppins-font);
   font-size: 18px;

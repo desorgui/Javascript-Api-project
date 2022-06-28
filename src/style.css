@@ -78,9 +78,16 @@ a {
 
 .display-item-block,
 .display-item-block-2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+}
+
+.display-items {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   margin-bottom: 2.45rem;
+  padding-bottom: 0.25rem;
 }
 
 .item-img-block {
@@ -102,6 +109,15 @@ a {
   align-items: baseline;
   padding: 0 12px;
   margin-bottom: 1.75rem;
+}
+
+.titles {
+  font-family: var(--poppins-font);
+  font-weight: 500;
+}
+
+.fa-heart-o {
+  font-size: 24px;
 }
 
 .comment-btn {

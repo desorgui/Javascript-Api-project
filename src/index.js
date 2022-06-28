@@ -1,2 +1,2 @@
 import './style.css';
-import images from './images/'
+import logo from '../src/images/logo.png';

@@ -70,8 +70,7 @@ a {
 .footer {
   font-family: var(--poppins-font);
   font-size: 18px;
-  padding: 30px 50px;
+  padding: 5vh 7%;
   margin-top: 50px;
   border-top: solid 2px #111;
-  width: 100%;
 }

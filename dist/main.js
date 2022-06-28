@@ -26,7 +26,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \******************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _display_list__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./display_list */ \"./modules/display_list\");\n// Fetch item from API\r\n\r\n\r\nconst getData = async () => {\r\n    const url = 'https://www.themealdb.com/api/json/v1/1/categories.php';\r\n    const request = new Request(url);\r\n    const results = await fetch(request);\r\n    const gameObj = await results.json();\r\n    //console.log(gameObj.categories);\r\n    const [ ...result ] = gameObj.categories;\r\n    //console.log(result);\r\n    (0,_display_list__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(result);\r\n  };\r\n  \r\n  /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (getData);\r\n  \n\n//# sourceURL=webpack://webpack/./modules/get-items.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _display_list__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./display_list */ \"./modules/display_list\");\n// Fetch item from API\r\n\r\n\r\nconst getData = async () => {\r\n  const url = 'https://www.themealdb.com/api/json/v1/1/categories.php';\r\n  const request = new Request(url);\r\n  const results = await fetch(request);\r\n  const gameObj = await results.json();\r\n  const [...result] = gameObj.categories;\r\n  (0,_display_list__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(result);\r\n};\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (getData);\n\n//# sourceURL=webpack://webpack/./modules/get-items.js?");
 
 /***/ }),
 
@@ -60,26 +60,6 @@ eval("\n\nmodule.exports = function (i) {\n  return i[1];\n};\n\n//# sourceURL=w
 
 /***/ }),
 
-/***/ "./src/images/beans.jpg":
-/*!******************************!*\
-  !*** ./src/images/beans.jpg ***!
-  \******************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"images/beans.jpg\");\n\n//# sourceURL=webpack://webpack/./src/images/beans.jpg?");
-
-/***/ }),
-
-/***/ "./src/images/chicken.png":
-/*!********************************!*\
-  !*** ./src/images/chicken.png ***!
-  \********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"images/chicken.png\");\n\n//# sourceURL=webpack://webpack/./src/images/chicken.png?");
-
-/***/ }),
-
 /***/ "./src/images/logo.png":
 /*!*****************************!*\
   !*** ./src/images/logo.png ***!
@@ -87,16 +67,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"images/logo.png\");\n\n//# sourceURL=webpack://webpack/./src/images/logo.png?");
-
-/***/ }),
-
-/***/ "./src/images/sausage.jpg":
-/*!********************************!*\
-  !*** ./src/images/sausage.jpg ***!
-  \********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"images/sausage.jpg\");\n\n//# sourceURL=webpack://webpack/./src/images/sausage.jpg?");
 
 /***/ }),
 
@@ -176,7 +146,7 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _images_logo_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./images/logo.png */ \"./src/images/logo.png\");\n/* harmony import */ var _images_chicken_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./images/chicken.png */ \"./src/images/chicken.png\");\n/* harmony import */ var _images_sausage_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./images/sausage.jpg */ \"./src/images/sausage.jpg\");\n/* harmony import */ var _images_beans_jpg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./images/beans.jpg */ \"./src/images/beans.jpg\");\n/* harmony import */ var _modules_get_items_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../modules/get-items.js */ \"./modules/get-items.js\");\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n(0,_modules_get_items_js__WEBPACK_IMPORTED_MODULE_5__[\"default\"])();\n\n//# sourceURL=webpack://webpack/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _images_logo_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./images/logo.png */ \"./src/images/logo.png\");\n/* harmony import */ var _modules_get_items_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../modules/get-items.js */ \"./modules/get-items.js\");\n\r\n\r\n\r\n\r\n(0,_modules_get_items_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\n\n//# sourceURL=webpack://webpack/./src/index.js?");
 
 /***/ })
 

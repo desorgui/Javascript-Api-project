@@ -1,4 +1,4 @@
-import getData from "./get-items";
+import getData from './get-items.js';
 
 const createPopup = (meal) => {
   const popupContainer = document.createElement('div');
@@ -28,9 +28,9 @@ const popup = () => {
     for (let i = 0; i < value.length; i += 1) {
       const commentButton = document.getElementById(`commentBtn${value[i].idCategory}`);
       commentButton.addEventListener('click', () => {
-        createPopup(value[i])
+        createPopup(value[i]);
       });
-    };
+    }
   });
 };
 

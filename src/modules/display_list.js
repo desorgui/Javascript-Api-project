@@ -2,7 +2,7 @@
 const displayItemBlock = document.getElementById('display-item-block');
 
 const displayList = (mealsCategory) => {
-  mealsCategory.forEach((element, index) => {
+  mealsCategory.forEach((element) => {
     const eachList = `
       <div class="display-item-1 display-items">
       <div class="item-img-block">

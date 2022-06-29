@@ -129,6 +129,51 @@ a {
   box-shadow: 3px 3px #000;
 }
 
+/*======= Popup ========*/
+
+.popup {
+  position: relative;
+  background-color: #fff;
+  width: 80%;
+  max-width: 1200px;
+  top: 50px;
+  left: 10%;
+  padding: 1rem;
+}
+
+.popupContainer {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  padding-bottom: 100px;
+  width: 100%;
+  z-index: 99;
+  background-color: rgba(0, 0, 0, 0.712);
+  overflow-y: scroll;
+}
+
+.close-popup {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  font-size: 2em;
+}
+
+.popup img {
+  width: 100%;
+}
+
+.meal-title {
+  font-size: 2em;
+  font-family: var(--poppins-font);
+}
+
+.meal-description {
+  font-size: 1.1em;
+  font-family: var(--poppins-font);
+  margin-bottom: 30px;
+}
+
 .footer {
   font-family: var(--poppins-font);
   font-size: 18px;

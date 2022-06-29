@@ -1,5 +1,5 @@
 // Fetch item from API
-import displayList from './display_list';
+import displayList from './display_list.js';
 
 const getData = async () => {
   const url = 'https://www.themealdb.com/api/json/v1/1/categories.php';

@@ -1,5 +1,4 @@
 // Displaying Images in the browser
-//import getData from "./get-items.js";
 const displayItemBlock = document.getElementById('display-item-block');
 
 const displayList = (mealsCategory) => {
@@ -16,8 +15,7 @@ const displayList = (mealsCategory) => {
       <button type="button" class="comment-btn">Comments</button>
       </div>
     `;
-    displayItemBlock.insertAdjacentHTML('beforeend', eachList);
-    //console.log(eachList);
+    displayItemBlock.insertAdjacentHTML('beforeend', eachList);    
   });
 }
 

@@ -11,6 +11,7 @@
 
 body {
   background-color: #fff;
+  font-family: var(--poppins-font);
 }
 
 /** General Rules **/
@@ -152,7 +153,7 @@ a {
 
 .close-popup {
   position: absolute;
-  top: 5%;
+  top: 25px;
   right: 5%;
   font-size: 2em;
 }
@@ -170,6 +171,56 @@ a {
   font-size: 1.1em;
   font-family: var(--poppins-font);
   margin-bottom: 30px;
+}
+
+ul.commentList {
+  display: block;
+  margin: 20px 0;
+}
+
+ul.commentList li {
+  margin-bottom: 10px;
+  font-size: 1.1em;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.301);
+}
+
+.commentCounter {
+  padding: 9px 15px;
+  border-radius: 50%;
+  background-color: #000;
+  color: #fff;
+}
+
+.commentForm {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.commentForm input {
+  height: 30px;
+  margin-bottom: 20px;
+}
+
+.commentForm textarea {
+  margin-bottom: 20px;
+}
+
+.commentForm button {
+  max-width: 150px;
+  font-size: 1.2em;
+}
+
+.username {
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.commentDate {
+  font-size: 0.6em;
+  font-style: italic;
 }
 
 .footer {

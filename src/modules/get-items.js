@@ -7,7 +7,11 @@ const getData = async () => {
   const results = await fetch(request);
   const mealObj = await results.json();
   const result = mealObj.categories;
-  displayList(result);
   return result;
 };
+
+const data = getData();
+data.then(value => {
+  displayList(value);
+})
 export default getData;

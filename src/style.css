@@ -138,6 +138,7 @@ a {
   top: 50px;
   left: 10%;
   padding: 1rem;
+  padding-bottom: 2.5rem;
 }
 
 .popupContainer {
@@ -199,18 +200,28 @@ ul.commentList li {
   margin-top: 30px;
 }
 
-.commentForm input {
-  height: 30px;
-  margin-bottom: 20px;
-}
-
-.commentForm textarea {
-  margin-bottom: 20px;
+.commentForm input ,
+.commentForm .commentMessage {
+  outline: 0;
+	resize: vertical;
+	padding: 0.5rem 0.75rem;
+	font-family: inherit;
+	background: #F7FAFC;
+	border-radius: 0.25rem;
+	border: 1px solid #E2E8F0;
+	box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+	margin-bottom: 0.75rem;
 }
 
 .commentForm button {
   max-width: 150px;
   font-size: 1.2em;
+  font-weight: bold;
+	color: #4A5568;
+	border: 1px solid #A0AEC0;
+	border-radius: 0.25rem;
+	background: transparent;
+	padding: 0.35rem 0.75rem;
 }
 
 .username {

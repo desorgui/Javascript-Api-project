@@ -21,7 +21,7 @@ const createPopup = (meal) => {
   <form class="commentForm">
   <input type="text" name="contentId" id="contentId" style="display:none" value="item${meal.idCategory}">
   <input type="text" name="username" id="username" placeholder="Your name">
-  <textarea name="message" id="message" cols="30" rows="10"></textarea>
+  <textarea name="message" id="message" class="commentMessage cols="30" placeholder="Your message" rows="7"></textarea>
   <button type="button" id="commentBtn">Comment</button>
   </form>
   </div>

@@ -1,5 +1,4 @@
 const getFood = ({ idCategory, strCategoryThumb, strCategory }, likes = 0) => {
-  
   const eachList = `
     <div class="item-img-block">
         <img class="images" src="${strCategoryThumb}" alt="Chicken">

@@ -21,7 +21,8 @@ const displayList = (mealsCategory, allLikes) => {
 
     itemList.classList = `display-item-${element.idCategory} display-items`;
 
-    mealId in getObj ? itemList.innerHTML = getFood(element, eachLike) : itemList.innerHTML = getFood(element);
+    mealId in getObj?
+    itemList.innerHTML = getFood(element, eachLike):itemList.innerHTML = getFood(element);
     displayItemBlock.appendChild(itemList);
   });
 };

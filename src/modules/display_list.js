@@ -1,11 +1,11 @@
 // Displaying Images in the browser
-import getFood from "./getfood.js";
+import getFood from './getfood.js';
 
 const getObj = (arrLike) => {
   const obj = {};
-  arrLike.forEach(eachLike => {
+  arrLike.forEach((eachLike) => {
     obj[eachLike.item_id] = eachLike.likes;
-  })
+  });
   return obj;
 };
 
@@ -20,7 +20,8 @@ const displayList = (mealsCategory, allLikes) => {
 
     itemList.classList = `display-item-${element.idCategory} display-items`;
 
-    Number[element.idCategory] in getObj ? itemList.innerHTML = getFood(element, eachLike) : itemList.innerHTML = getFood(element);
+    Number[element.idCategory] in getObj ? itemList.innerHTML =
+     getFood(element, eachLike) : itemList.innerHTML = getFood(element);
     displayItemBlock.appendChild(itemList);
   });
 };

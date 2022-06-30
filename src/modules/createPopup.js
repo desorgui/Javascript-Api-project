@@ -1,5 +1,5 @@
 import getData from './get-items.js';
-import { addComment, createCommentList, lastCommentItem } from './invovmentApi.js'
+import { addNewComment, createCommentList } from './commentManager.js'
 
 const createPopup = (meal) => {
   const popupContainer = document.createElement('div');
@@ -34,21 +34,6 @@ const createPopup = (meal) => {
   });
 };
 
-const addNewComment = () => {
-  const mealId = document.getElementById('contentId');
-  const username = document.getElementById('username');
-  const comment = document.getElementById('message');
-  const addCommentBtn = document.getElementById('commentBtn');
-  addCommentBtn.addEventListener('click', () => {
-    if(username.value && comment.value){
-      addComment(mealId.value, username.value, comment.value);
-      setTimeout(lastCommentItem, 500);
-      username.value = '';
-      comment.value = '';
-    }
-  });
-};
-
 const popup = () => {
   const mealData = getData();
   mealData.then((value) => {
@@ -56,7 +41,7 @@ const popup = () => {
       const commentButton = document.getElementById(`commentBtn${value[i].idCategory}`);
       commentButton.addEventListener('click', () => {
         createPopup(value[i]);
-        setTimeout(createCommentList, 100)
+        setTimeout(createCommentList, 100);
         setTimeout(addNewComment, 100);
       });
     }

@@ -1,34 +1,4 @@
-const involvementApi = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi';
-const appID = 'ZwEIM6qjuOV08HbkSn58';
-
-const addComment = async (mealId, username, comment) => {
-  await fetch(`${involvementApi}/apps/${appID}/comments`,
-    {
-      method: 'POST',
-      body: JSON.stringify({
-        item_id: `${mealId}`,
-        username: `${username}`,
-        comment: `${comment}`,
-      }),
-      headers: {
-        'Content-type': 'application/json; charset=UTF-8',
-      },
-    });
-};
-
-const getComment = async (mealId) => {
-  const getData = await fetch(`${involvementApi}/apps/${appID}/comments?item_id=${mealId}`, {
-    method: 'GET',
-    headers: {
-      'Content-type': 'application/json; charset=UTF-8',
-    },
-  });
-  let results = '';
-  if (getData.status !== 400) {
-    results = await getData.json();
-  }
-  return results;
-};
+import { addComment, getComment } from './involvementApi.js';
 
 const createLi = (date, username, comment) => {
   const listCommentContainer = document.getElementById('commentList');
@@ -39,7 +9,7 @@ const createLi = (date, username, comment) => {
   <span class="commentDate">${date}</span>
   </br><span class"commentMessage">${comment}</span>`;
   listCommentContainer.appendChild(listItem);
-}
+};
 
 const createCommentList = () => {
   const commentCounter = document.getElementById('commentCounter');
@@ -50,9 +20,9 @@ const createCommentList = () => {
     if (value) {
       value.forEach(element => {
         counter += 1;
-        createLi(element.creation_date, element.username, element.comment)
+        createLi(element.creation_date, element.username, element.comment);
       });
-    }    
+    }
     commentCounter.innerHTML = `${counter}`;
   });
 };
@@ -62,10 +32,24 @@ const lastCommentItem = () => {
   const mealId = document.getElementById('contentId');
   const commentData = getComment(mealId.value);
   commentData.then(value => {
-    lastComment = value[value.length -1];    
+    lastComment = value[value.length -1];
     createLi(lastComment.creation_date, lastComment.username, lastComment.comment);
   });
 };
 
+const addNewComment = () => {
+  const mealId = document.getElementById('contentId');
+  const username = document.getElementById('username');
+  const comment = document.getElementById('message');
+  const addCommentBtn = document.getElementById('commentBtn');
+  addCommentBtn.addEventListener('click', () => {
+    if(username.value && comment.value){
+      addComment(mealId.value, username.value, comment.value);
+      setTimeout(lastCommentItem, 500);
+      username.value = '';
+      comment.value = '';
+    }
+  });
+};
 
-export { addComment, createCommentList, lastCommentItem };
+export { addNewComment, createCommentList };

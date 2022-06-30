@@ -20,7 +20,7 @@ const displayList = (mealsCategory, allLikes) => {
     const itemList = document.createElement('div');
 
     itemList.classList = `display-item-${element.idCategory} display-items`;
-  
+
     if (mealId in getObj) {
       itemList.innerHTML = getFood(element, eachLike);
     } else {

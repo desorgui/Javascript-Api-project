@@ -1,5 +1,5 @@
 const getFood = ({ idCategory, strCategoryThumb, strCategory }, likes = 0) => {
-  return `
+  const eachList = `
     <div class="item-img-block">
         <img class="images" src="${strCategoryThumb}" alt="Chicken">
     </div>
@@ -12,6 +12,7 @@ const getFood = ({ idCategory, strCategoryThumb, strCategory }, likes = 0) => {
     </div>
     <button type="button" id="commentBtn${idCategory}" class="comment-btn">Comments</button>
   `;
+  return eachList;
 };
 
 export default getFood;

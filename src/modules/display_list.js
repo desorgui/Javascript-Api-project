@@ -15,13 +15,13 @@ const displayList = (mealsCategory, allLikes) => {
 
   const eachObj = getObj(allLikes);
   mealsCategory.forEach((element) => {
+    const mealId = Number[element.idCategory];
     const eachLike = eachObj[element.idCategory];
     const itemList = document.createElement('div');
 
     itemList.classList = `display-item-${element.idCategory} display-items`;
 
-    Number[element.idCategory] in getObj ? itemList.innerHTML =
-     getFood(element, eachLike) : itemList.innerHTML = getFood(element);
+    mealId in getObj ? itemList.innerHTML = getFood(element, eachLike) : itemList.innerHTML = getFood(element);
     displayItemBlock.appendChild(itemList);
   });
 };

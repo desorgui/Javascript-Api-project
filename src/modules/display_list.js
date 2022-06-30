@@ -1,5 +1,4 @@
 // Displaying Images in the browser
-import { get } from 'lodash';
 import getFood from './getfood.js';
 
 const getObj = (arrLike) => {

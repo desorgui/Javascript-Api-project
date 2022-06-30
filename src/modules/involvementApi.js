@@ -29,5 +29,4 @@ const getComment = async (mealId) => {
   return results;
 };
 
-
 export { addComment, getComment };

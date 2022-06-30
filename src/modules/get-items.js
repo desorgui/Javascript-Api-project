@@ -11,7 +11,7 @@ const getData = async () => {
 };
 
 const data = getData();
-data.then(value => {
+data.then((value) => {
   displayList(value);
-})
+});
 export default getData;

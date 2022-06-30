@@ -1,5 +1,5 @@
 import getData from './get-items.js';
-import { addNewComment, createCommentList } from './commentManager.js'
+import { addNewComment, createCommentList } from './commentManager.js';
 
 const createPopup = (meal) => {
   const popupContainer = document.createElement('div');
@@ -48,4 +48,4 @@ const popup = () => {
   });
 };
 
-export { popup } ;
+export default popup;

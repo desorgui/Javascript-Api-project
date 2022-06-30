@@ -1,4 +1,5 @@
 // Displaying Images in the browser
+import { get } from 'lodash';
 import getFood from './getfood.js';
 
 const getObj = (arrLike) => {
@@ -20,9 +21,12 @@ const displayList = (mealsCategory, allLikes) => {
     const itemList = document.createElement('div');
 
     itemList.classList = `display-item-${element.idCategory} display-items`;
-
-    mealId in getObj ? itemList.innerHTML = getFood(element, eachLike)
-      : itemList.innerHTML = getFood(element);
+  
+    if (mealId in getObj) {
+      itemList.innerHTML = getFood(element, eachLike);
+    } else {
+      itemList.innerHTML = getFood(element);
+    }
     displayItemBlock.appendChild(itemList);
   });
 };

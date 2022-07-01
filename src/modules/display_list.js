@@ -1,17 +1,6 @@
 // Displaying Images in the browser
 import getFood from './getfood.js';
-import { addLikes } from './get-items.js';
-//import newLikes from './addlikes.js';
-
-const newLikes = () => {
-  const likeBtn = document.querySelectorAll('.like');
-  likeBtn.forEach((eachLike) => {
-    eachLike.addEventListener('click', (e) => {
-      const id = Number(e.target.id.slice(4));
-      addLikes({ item_id: id });
-    });
-  });
-};
+import newLikes from './addlikes.js';
 
 const getObj = (arrLike) => {
   const obj = {};

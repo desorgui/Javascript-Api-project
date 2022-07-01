@@ -1,10 +1,15 @@
 import { getComment } from './involvementApi.js';
 
+const countComment = (array) => {
+  return array.length;
+}
+
 const commentCounter = (IdMeal) => {
   const commentCounterEl = document.getElementById('commentCounter');
   const CommentData = getComment(IdMeal);
   CommentData.then((value) => {
-    commentCounterEl.innerHTML = `${value.length}`;
+    const commentNumber = countComment(value);
+    commentCounterEl.innerHTML = `${commentNumber}`;
   });
 };
-export default commentCounter;
+export { commentCounter, countComment };

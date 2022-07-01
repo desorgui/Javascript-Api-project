@@ -1,5 +1,5 @@
 import { addComment, getComment } from './involvementApi.js';
-import commentCounter from './commentCounter.js';
+import { commentCounter } from './commentCounter.js';
 
 const createLi = (date, username, comment) => {
   const listCommentContainer = document.getElementById('commentList');

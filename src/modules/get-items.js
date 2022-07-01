@@ -9,9 +9,11 @@ const getData = async () => {
   const mealObj = await results.json();
   const likesObj = await results2.json();
   const result = mealObj.categories;
-
-  displayList(result, likesObj);
   return result;
 };
 
+const data = getData();
+data.then((value) => {
+  displayList(value);
+});
 export default getData;

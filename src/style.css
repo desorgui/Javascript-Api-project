@@ -11,6 +11,7 @@
 
 body {
   background-color: #fff;
+  font-family: var(--poppins-font);
 }
 
 /** General Rules **/
@@ -137,6 +138,7 @@ a {
   top: 50px;
   left: 10%;
   padding: 1rem;
+  padding-bottom: 2.5rem;
 }
 
 .popupContainer {
@@ -152,7 +154,7 @@ a {
 
 .close-popup {
   position: absolute;
-  top: 5%;
+  top: 25px;
   right: 5%;
   font-size: 2em;
 }
@@ -170,6 +172,66 @@ a {
   font-size: 1.1em;
   font-family: var(--poppins-font);
   margin-bottom: 30px;
+}
+
+ul.commentList {
+  display: block;
+  margin: 20px 0;
+}
+
+ul.commentList li {
+  margin-bottom: 10px;
+  font-size: 1.1em;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.301);
+}
+
+.commentCounter {
+  padding: 9px 15px;
+  border-radius: 50%;
+  background-color: #000;
+  color: #fff;
+}
+
+.commentForm {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.commentForm input,
+.commentForm .commentMessage {
+  outline: 0;
+  resize: vertical;
+  padding: 0.5rem 0.75rem;
+  font-family: inherit;
+  background: #f7fafc;
+  border-radius: 0.25rem;
+  border: 1px solid #e2e8f0;
+  box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+  margin-bottom: 0.75rem;
+}
+
+.commentForm button {
+  max-width: 150px;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #4a5568;
+  border: 1px solid #a0aec0;
+  border-radius: 0.25rem;
+  background: transparent;
+  padding: 0.35rem 0.75rem;
+}
+
+.username {
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.commentDate {
+  font-size: 0.6em;
+  font-style: italic;
 }
 
 .footer {

@@ -1,4 +1,5 @@
 import getData from './get-items.js';
+import { addNewComment, createCommentList } from './commentManager.js';
 
 const createPopup = (meal) => {
   const popupContainer = document.createElement('div');
@@ -13,6 +14,17 @@ const createPopup = (meal) => {
   </div>
   <h3 class="meal-title">${meal.strCategory}</h3>
   <p class="meal-description">${meal.strCategoryDescription}</p>
+  <div class="commentContainer">
+  <h3><span id="commentCounter" class="commentCounter"></span> Comments</h3>
+  <ul class="commentList" id="commentList"></ul>
+  <h3>Add a comment</h3>
+  <form class="commentForm">
+  <input type="text" name="contentId" id="contentId" style="display:none" value="item${meal.idCategory}">
+  <input type="text" name="username" id="username" placeholder="Your name">
+  <textarea name="message" id="message" class="commentMessage cols="30" placeholder="Your message" rows="7"></textarea>
+  <button type="button" id="commentBtn">Comment</button>
+  </form>
+  </div>
   `;
   popupContainer.appendChild(popup);
   document.body.appendChild(popupContainer);
@@ -29,6 +41,8 @@ const popup = () => {
       const commentButton = document.getElementById(`commentBtn${value[i].idCategory}`);
       commentButton.addEventListener('click', () => {
         createPopup(value[i]);
+        setTimeout(createCommentList, 100);
+        setTimeout(addNewComment, 100);
       });
     }
   });

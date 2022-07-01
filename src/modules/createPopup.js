@@ -1,4 +1,4 @@
-import getData from './get-items.js';
+import {getData} from './get-items.js';
 
 const createPopup = (meal) => {
   const popupContainer = document.createElement('div');

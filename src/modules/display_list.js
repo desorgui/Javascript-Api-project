@@ -1,21 +1,32 @@
 // Displaying Images in the browser
-const displayItemBlock = document.getElementById('display-item-block');
+import getFood from './getfood.js';
 
-const displayList = (mealsCategory) => {
+const getObj = (arrLike) => {
+  const obj = {};
+  arrLike.forEach((eachLike) => {
+    obj[eachLike.item_id] = eachLike.likes;
+  });
+  return obj;
+};
+
+const displayList = (mealsCategory, allLikes) => {
+  const displayItemBlock = document.getElementById('display-item-block');
+  displayItemBlock.innerHTML = '';
+
+  const eachObj = getObj(allLikes);
   mealsCategory.forEach((element) => {
-    const eachList = `
-      <div class="display-item-1 display-items">
-      <div class="item-img-block">
-          <img class="images" src="${element.strCategoryThumb}" alt="Chicken">
-      </div>
-      <div class="item-title-like">
-          <h2 class="title-1 titles">${element.strCategory}</h2>
-          <i class="fa fa-heart-o" aria-hidden="true"></i>
-      </div>
-      <button type="button" id="commentBtn${element.idCategory}" class="comment-btn">Comments</button>
-      </div>
-    `;
-    displayItemBlock.insertAdjacentHTML('beforeend', eachList);
+    const mealId = Number[element.idCategory];
+    const eachLike = eachObj[element.idCategory];
+    const itemList = document.createElement('div');
+
+    itemList.classList = `display-item-${element.idCategory} display-items`;
+
+    if (mealId in getObj) {
+      itemList.innerHTML = getFood(element, eachLike);
+    } else {
+      itemList.innerHTML = getFood(element);
+    }
+    displayItemBlock.appendChild(itemList);
   });
 };
 

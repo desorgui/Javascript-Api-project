@@ -47,7 +47,7 @@ const addNewComment = () => {
       username.value = '';
       comment.value = '';
     }
-    setTimeout(commentCounter(mealId.value), 700);
+    setTimeout(commentCounter(mealId.value), 500);
   });
 };
 

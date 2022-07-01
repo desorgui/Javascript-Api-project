@@ -25,7 +25,7 @@ const getComment = async (mealId) => {
   let results = '';
   if (getData.status !== 400) {
     results = await getData.json();
-  };
+  }
   return results;
 };
 

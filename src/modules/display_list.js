@@ -1,6 +1,7 @@
 // Displaying Images in the browser
 import getFood from './getfood.js';
 import newLikes from './addlikes.js';
+import itemCounter from './itemCount.js';
 
 const getObj = (arrLike) => {
   const obj = {};
@@ -12,6 +13,7 @@ const getObj = (arrLike) => {
 
 const displayList = (mealsCategory, allLikes) => {
   const displayItemBlock = document.getElementById('display-item-block');
+  const allFoods = document.getElementById('item-counter');
   displayItemBlock.innerHTML = '';
 
   const eachObj = getObj(allLikes);
@@ -20,6 +22,7 @@ const displayList = (mealsCategory, allLikes) => {
     const eachLike = eachObj[mealId];
     const itemList = document.createElement('div');
     itemList.classList = `display-item-${element.idCategory} display-items`;
+    allFoods.innerHTML = `${itemCounter(mealsCategory)}`;
 
     if (mealId in eachObj) {
       itemList.innerHTML = getFood(element, eachLike);

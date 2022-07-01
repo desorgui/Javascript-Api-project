@@ -1,4 +1,4 @@
-import addLikes from './get-items.js';
+import { addLikes } from './get-items.js';
 
 const newLikes = () => {
   const likeBtn = document.querySelectorAll('.like');

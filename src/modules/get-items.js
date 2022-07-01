@@ -15,7 +15,7 @@ const getData = async () => {
 };
 
 // Add Likes
-const addLikes = async(like) => {
+const addLikes = async (like) => {
   const url2 = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/PYgIdxnvxE7RLPTKi2DI/likes/';
   const result3 = await fetch(url2, {
     method: 'POST',
@@ -29,4 +29,4 @@ const addLikes = async(like) => {
   return sendData;
 };
 
-export {getData, addLikes};
+export { getData, addLikes };

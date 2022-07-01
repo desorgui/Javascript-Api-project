@@ -19,8 +19,6 @@ const displayList = (mealsCategory, allLikes) => {
     const mealId = Number(element.idCategory);
     const eachLike = eachObj[mealId];
     const itemList = document.createElement('div');
-    //console.log(element);
-    //console.log(mealId, eachLike);
     itemList.classList = `display-item-${element.idCategory} display-items`;
 
     if (mealId in eachObj) {

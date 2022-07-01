@@ -1,5 +1,3 @@
-import newLikes from "./addlikes";
-
 const getFood = ({ idCategory, strCategoryThumb, strCategory }, likes = 0) => {
   const eachList = `
     <div class="item-img-block">
@@ -9,12 +7,11 @@ const getFood = ({ idCategory, strCategoryThumb, strCategory }, likes = 0) => {
         <h2 class="title-1 titles">${strCategory}</h2>
         <div class="likes-block">
             <button  id="like${idCategory}" class="like like${idCategory}">&#10084;</button>
-            <p class="item-likes likes">${likes<2 ? likes + ' Like': likes + ' Likes'}</p>
+            <p class="item-likes likes">${likes < 2 ? `${likes} Like` : `${likes}  Likes`}</p>
         </div>
     </div>
     <button type="button" id="commentBtn${idCategory}" class="comment-btn">Comments</button>
   `;
-  //newLikes();
   return eachList;
 };
 

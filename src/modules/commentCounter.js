@@ -1,8 +1,6 @@
 import { getComment } from './involvementApi.js';
 
-const countComment = (array) => {
-  return array.length;
-}
+const countComment = (array) => array.length;
 
 const commentCounter = (IdMeal) => {
   const commentCounterEl = document.getElementById('commentCounter');

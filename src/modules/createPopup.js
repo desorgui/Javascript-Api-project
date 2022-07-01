@@ -1,4 +1,4 @@
-import { getData } from './get-items.js';
+import getData from './get-items.js';
 import { addNewComment, createCommentList } from './commentManager.js';
 
 const createPopup = (meal) => {

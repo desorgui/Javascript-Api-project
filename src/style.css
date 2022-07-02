@@ -241,3 +241,15 @@ ul.commentList li {
   margin-top: 50px;
   border-top: solid 2px #111;
 }
+
+@media only screen and (max-width: 760px) {
+  .main-section {
+    padding: 0.01rem;
+  }
+  .display-item-block,
+  .display-item-block-2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+}

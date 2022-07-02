@@ -36,11 +36,12 @@ const createPopup = (meal) => {
 
 const popup = () => {
   const mealData = getData();
-  mealData.then((value) => {
-    for (let i = 0; i < value.length; i += 1) {
-      const commentButton = document.getElementById(`commentBtn${value[i].idCategory}`);
+  mealData.then(async (value) => {
+    const mealValue = await value;
+    for (let i = 0; i < mealValue.length; i += 1) {
+      const commentButton = document.getElementById(`commentBtn${mealValue[i].idCategory}`);
       commentButton.addEventListener('click', () => {
-        createPopup(value[i]);
+        createPopup(mealValue[i]);
         setTimeout(createCommentList, 100);
         setTimeout(addNewComment, 100);
       });

@@ -15,8 +15,8 @@ const createLi = (date, username, comment) => {
 const createCommentList = () => {
   const mealId = document.getElementById('contentId');
   const commentData = getComment(mealId.value);
-  commentData.then((value) => {
-    if (value) {
+  commentData.then(async (value) => {
+    if (await value) {
       value.forEach((element) => {
         createLi(element.creation_date, element.username, element.comment);
       });
@@ -29,8 +29,8 @@ let lastComment = [];
 const lastCommentItem = () => {
   const mealId = document.getElementById('contentId');
   const commentData = getComment(mealId.value);
-  commentData.then((value) => {
-    lastComment = value[value.length - 1];
+  commentData.then(async (value) => {
+    lastComment = await value[value.length - 1];
     createLi(lastComment.creation_date, lastComment.username, lastComment.comment);
   });
 };

@@ -6,8 +6,7 @@ const commentCounter = (IdMeal) => {
   const commentCounterEl = document.getElementById('commentCounter');
   const CommentData = getComment(IdMeal);
   CommentData.then((value) => {
-    commentCounterEl.innerHTML = `${value.length}`;    
-    countComment(value);
+    commentCounterEl.innerHTML = `${value.length}`;
   });
 };
 export { commentCounter, countComment };

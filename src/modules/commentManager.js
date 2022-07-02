@@ -15,14 +15,14 @@ const createLi = (date, username, comment) => {
 const createCommentList = () => {
   const mealId = document.getElementById('contentId');
   const commentData = getComment(mealId.value);
-  commentCounter(mealId.value);
   commentData.then((value) => {
     if (value) {
       value.forEach((element) => {
         createLi(element.creation_date, element.username, element.comment);
       });
     }
-  });
+  });  
+  commentCounter(mealId.value);
 };
 
 let lastComment = [];

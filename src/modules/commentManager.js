@@ -1,5 +1,5 @@
 import { addComment, getComment } from './involvementApi.js';
-import commentCounter from './commentCounter.js';
+import { commentCounter } from './commentCounter.js';
 
 const createLi = (date, username, comment) => {
   const listCommentContainer = document.getElementById('commentList');
@@ -15,7 +15,6 @@ const createLi = (date, username, comment) => {
 const createCommentList = () => {
   const mealId = document.getElementById('contentId');
   const commentData = getComment(mealId.value);
-  commentCounter(mealId.value);
   commentData.then((value) => {
     if (value) {
       value.forEach((element) => {
@@ -23,6 +22,7 @@ const createCommentList = () => {
       });
     }
   });
+  commentCounter(mealId.value);
 };
 
 let lastComment = [];
@@ -47,7 +47,7 @@ const addNewComment = () => {
       username.value = '';
       comment.value = '';
     }
-    setTimeout(commentCounter(mealId.value), 700);
+    setTimeout(commentCounter(mealId.value), 500);
   });
 };
 

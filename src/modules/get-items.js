@@ -1,7 +1,7 @@
 // Fetch item from API
 import itemCounter from './itemCount.js';
 import getFood from './getfood.js';
-import popup from './createPopup.js';
+import popup from './createPopup.js'; // eslint-disable-line
 
 const newLikes = () => {
   const likeBtn = document.querySelectorAll('.like');

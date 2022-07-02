@@ -21,7 +21,7 @@ const createCommentList = () => {
         createLi(element.creation_date, element.username, element.comment);
       });
     }
-  });  
+  });
   commentCounter(mealId.value);
 };
 

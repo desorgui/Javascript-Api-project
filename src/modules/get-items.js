@@ -1,13 +1,14 @@
 // Fetch item from API
 import itemCounter from './itemCount.js';
 import getFood from './getfood.js';
+import popup from './createPopup.js';
 
 const newLikes = () => {
   const likeBtn = document.querySelectorAll('.like');
   likeBtn.forEach((eachLike) => {
     eachLike.addEventListener('click', (e) => {
       const id = Number(e.target.id.slice(4));
-      addLikes({ item_id: id });
+      addLikes({ item_id: id }); // eslint-disable-line
     });
   });
 };
@@ -43,7 +44,6 @@ const displayList = (mealsCategory, allLikes) => {
   newLikes();
 };
 
-
 const getData = async () => {
   const url = 'https://www.themealdb.com/api/json/v1/1/categories.php';
   const url2 = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/CRIAnYLyDDdetPKpfqDg/likes/';
@@ -72,9 +72,10 @@ const addLikes = async (like) => {
       'Content-Type': 'application/json;charset=utf-8',
     },
   });
-  const sendData =  result3.text();
+  const sendData = result3.text();
   getData();
+  popup();
   return sendData;
 };
 
-export { getData };
+export default getData;

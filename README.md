@@ -14,8 +14,13 @@ First copy this repo and clone it on your machine using this [link](git@github.c
 Then cd into webpack.
 
 # Authors
-:adult: Abdullateef Bello
 :adult: Guishny Desor
+
+- GitHub: [desorgui](https://github.com/desorgui/)
+- Linkedin: [Guishny Desor](https://www.linkedin.com/in/guishny-desor-5421a01a9/)
+
+:adult: Abdullateef Bello
+
 - GitHub: [@Ibnballo1](https://github.com/Ibnballo1/)
 - Linkedin: [Abdullateef Bello](https://www.linkedin.com/in/abdullateef-bello-1b8006228/)
 

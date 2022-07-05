@@ -38,4 +38,4 @@ Kindly give a :hearts: if you like this.
 - We expressed our gratitude for everyone.
 
 # License
-This project is [MIT](C:\Users\J T COMPUTER\Microverse-April18\Module2- JavaScript and Networking\Week5- Capstone Project\Javascript-Capstone-Project\MIT.md).
+This project is [MIT](https://github.com/IQAndreas/markdown-licenses/blob/master/mit.md).
